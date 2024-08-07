@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel = "stylesheet" href = "style.css">
+</head>
+<body>
+
+    <!--    head & header are 2 different things, <head> is different from <body> whereas <header> is declared inside <body> & footer
+         is declared at the end of body tag. (Through footer tag, content appears at the bottom of webpage)      -->
+
+
+
+    <header>
+
+
+        <div class="navbar">         
+
+
+
+            <!--                           BOX 1 (LOGO)                           -->
+
+
+            <div class="nav-logo border">   <!-- we created a class(nav-logo border) inside navbar class, "nav"-logo will tell us ki logo is nav ka part which makes it easy while accessing in css file -->
+                <div class="logo">   <!-- Ab "logo" class mein we'll actually place our logos-->
+
+                </div>
+            </div>
+
+
+
+             
+            <!--                          BOX 2 (ADDRESS)                          -->
+
+
+<!-- Now we have to create the next detail on right side of amazon logo which is "Deliver to India" by inspecting-->
+            <div class="nav-address border"> <!-- "border add-on karne se uk what will happen *****************"-->
+                <p class="add-first">Deliver to</p>
+                <div class="add-icon">    <!-- We have created this class for icon & para2 coz woh dono ek hi line mein hai-->
+                <i class="fa-solid fa-location-dot"></i>  <!-- Extracted from font awesome ka html url (location logo) since "font awesome" is directly linked to our html file through cdn url -->
+                <p class="add-sec">India</p> </div>
+            </div>
+
+
+           
+
+            <!--                         BOX 3 (SEARCH BAR)                             -->
+
+
+            <div class = "nav-search border">
+
+            <select class="search-select">                              <!-- The first section is the "All" option in the search bar-->
+                <option>All</option>
+            </select>
+            <input placeholder="Search Amazon" class="search-input">  <!-- 2nd is the input placeholder where we can give our input and in default it's mentioned "Search Amazon" on it-->
+            
+            <div class="search-icon">           <!-- 3rd is the lollipop search-icon -->
+                <i class="fa-solid fa-magnifying-glass"></i></div>
+            </div>
+
+
+
+
+            <!--                          BOX 4 & 5 MERGING DUE TO SAME FONT SIZES            -->
+
+            <div class="nav-signin border">
+                <p><span>Hello, sign in </span></p> 
+                <!-- Here, I could have given <p class="nav-first" but we can style it by directly accessing it through span so no need of declaration of class-->
+                <p class="nav-second">Account & Lists</p>
+            </div>
+
+<!-- Copy pasted the same above code below by just making changes in the name of main div class & keeping span & p class same (Content to be displayed is diff)
+                               so style.css file mein ek style se 2 neshaana (targets) ------ MERGING               -->
+
+            <div class="nav-returns border">
+                <p><span>Returns</span></p> 
+                <!-- Here, I could have given <p class="nav-first" but we can style it by directly accessing it through span so no need of declaration of class-->
+                <p class="nav-second">& Orders</p>
+
+
+            </div>
+
+
+
+
+
+            <!--                                      BOX 6 (CART)           -->
+
+
+            <div class="nav-cart border">
+                <i class="fa-solid fa-cart-shopping"></i>
+                Cart         <!-- There's no need to define Cart in <p> tag u can just keep it as it is since it's already under <div> tag-->
+            </div>
+
+                            
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+<!--                                                 NEXT PANEL (BOX 1)                                       -->
+
+                          
+
+
+<div class="panel"> 
+<!-- This main class "panel" will contain 3 sub-classes-->
+
+
+
+
+
+    <div class="panel-all">
+        <i class="fa-solid fa-bars"></i>
+        All
+    </div>
+    <div class="panel-ops">
+        <p>Today's Deal</p>
+        <p> Customer Service</p>
+        <p>Registry</p>
+        <p>Gift Cards</p>
+        <p>Sell</p>
+    </div>
+    <div class="panel-deals">
+        Shop deals in Electronics
+    </div>
+</div>
+
+
+    </header>
+
+    <!--                              Outside header, we've created this <div class = "hero-section">            -->
+
+    <div class="hero-section">
+        <div class="hero-msg">
+            You are on amazon.com. You can also shop on Amazon India for millions of products with fast local delivery. <a href="https://www.amazon.in/?ref=aisgw_intl_stripe_in">Click here to go to amazon.in</a> 
+        </div>
+    </div>
+
+
+
+
+
+<!--                                        SHOP SECTION (Same like above - Outside header)                                          -->
+
+<div class="shop-section">
+
+
+
+
+    <div class="box1 box">
+    <div class="box-content">
+        <h2>Clothes </h2>
+
+        <div class="box-img" style = "background-image: url('box1_image.jpg')"></div>
+        <p> See more</p>   </div>
+</div>
+
+<!-- JUST COPY-PASTE THE ABOVE SAME LAYOUT FOR OTHER BOXES AS WELL (ONLY THE IMG WILL BE DIFF)        -->
+
+       <div class="box2 box">
+        <div class="box-content">
+            <h2>Health & Personal Care </h2>
+    
+            <div class="box-img" style = "background-image: url('box2_image.jpg')"></div>
+            <p> See more</p>   </div>
+    </div>
+
+
+    <div class="box3 box">
+        <div class="box-content">
+            <h2>Furniture </h2>
+    
+            <div class="box-img" style = "background-image: url('box3_image.jpg')"></div>
+            <p> See more</p>   </div>
+    </div>
+
+
+
+    <div class="box4 box">
+        <div class="box-content">
+            <h2>Electronics </h2>
+    
+            <div class="box-img" style = "background-image: url('box4_image.jpg')"></div>
+            <p> See more</p>   </div>
+    </div>
+
+
+
+
+    <div class="box5 box">
+        <div class="box-content">
+            <h2> Beauty picks</h2>
+    
+            <div class="box-img" style = "background-image: url('box5_image.jpg')"></div>
+            <p> See more</p>   </div>
+    </div>
+
+
+
+    <div class="box6 box">
+        <div class="box-content">
+            <h2>Pet Care </h2>
+    
+            <div class="box-img" style = "background-image: url('box6_image.jpg')"></div>
+            <p> See more</p>   </div>
+    </div>
+
+
+
+    <div class="box7 box">
+        <div class="box-content">
+            <h2>New Arrival in Toys </h2>
+    
+            <div class="box-img" style = "background-image: url('box7_image.jpg')"></div>
+            <p> See more</p>   </div>
+    </div>
+
+
+
+    <div class="box8 box">
+        <div class="box-content">
+            <h2>Discover Fashion Trends </h2>
+    
+            <div class="box-img" style = "background-image: url('box8_image.jpg')"></div>
+            <p> See more</p>   </div>
+    </div>
+
+
+
+</div>
+
+
+
+
+
+<!--                                             FOOTER PANEL                                                                    -->
+
+<footer>
+
+
+    <div class="foot-panel1">
+        Back to Top
+    </div>
+
+    <div class="foot-panel2">
+        <ul>
+            <p> Get to Know Us </p>
+           <a> Careers </a>
+           <a> Blog </a>
+           <a> About Amazon </a>
+           <a> Investor Relations </a>
+            <a> Amazon Devices </a>
+           <a>  Amazon Science </a>
+
+        </ul>
+
+
+        <ul>
+            <p> Make Money with Us </p>
+           <a> Sell products on Amazon </a>
+           <a> Sell on Amazon Business </a>
+           <a> Sell apps on Amazon </a>
+           <a> Become an Affiliate </a>
+            <a> Advertise Your Products </a>
+           <a>  Self-Publish with Us </a>
+           <a>Host an Amazon Hub</a>
+           <a> › See More Make Money with Us</a>
+
+        </ul>
+
+
+        <ul>
+            <p> Amazon Payment Products </p>
+           <a> Amazon Business Card </a>
+           <a> Shop with Points </a>
+           <a> Reload Your Balance </a>
+           <a> Amazon Currency Converter </a>
+           
+
+        </ul>
+
+
+        <ul>
+            <p> Let Us Help You </p>
+           <a> Amazon and COVID-19 </a>
+           <a> Your Account </a>
+           <a> Your Orders </a>
+           <a> Shipping Rates & Policies </a>
+            <a> Returns & Replacements </a>
+           <a>  Manage Your Content and Devices </a>
+           <a> Help</a>
+
+        </ul>
+
+ </div>
+
+
+
+ 
+ <div class="foot-panel3">
+    <div class="logo">
+
+    </div>
+ </div>
+
+
+
+
+ <div class="foot-panel4">
+    <div class="pages">
+        <a> Conditions of Use </a>
+        <a>Privacy Notice</a>
+        <a> Your Ads Privacy Choices</a>
+    </div>
+
+    <div class="copyright">
+        © 1996-2024, Amazon.com, Inc. or its affiliates
+    </div>
+ </div>
+
+
+
+</footer>
+
+    
+</body>
+</html>

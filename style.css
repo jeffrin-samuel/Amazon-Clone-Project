@@ -1,0 +1,600 @@
+/* Don't forget to use  Ctrl + S everytime in html & CSS file before checking out the webapge for changes & don't forget ;         */
+
+/* Mistake alert: Whenever u create div tag make sure u write everthing inside open and close tags and not outside close tag (This mistake happens often)   */
+ 
+/* REMEMBER: 45 x 40px --> WIDTH x HEIGHT (Here, width is 45px and height is 40px in this format)        */
+
+/* head & header are 2 different things, <head> is different from <body> whereas <header> is declared inside <body>   */
+
+/* margin:left --> provides margin(space) from left side.
+For eg, If 2 words are closely connected to each other then this can be used to provide space between them  */
+
+
+
+/*background-size: cover; -->   This will ensure that the bg img covers all the bg area correctly   */
+
+
+
+/* align-items: center; --> Sets items on center
+text-align: center; --> Sets the text on center   */
+
+
+
+
+
+/*                                      DIFFERENCE BTW MARGIN-TOP & PADDING-TOP                           
+
+.pages{
+    padding-top: 25px;       // This assures that "pages" class mein joh contents (text) hai, only those contents will leave a space of 
+                                                                       25px from top
+    
+
+}
+
+.pages{
+    margin-top: 25px;       //This assures that entire "pages" class (including bg with texts) will leave a space of 25px 
+                                                                 from top 
+    
+}
+
+.pages{
+    border-top: 25px;       //This will create a border of thickness 25px on top
+    
+}
+
+
+
+
+
+/* 1) display: flex; --> It will wrap up the text and wohi box or space mein fit karwayega 
+
+2) display: block; ---> It will display the list of items (multiple parahs) on 1 line vertically (like a block of code)
+
+3) display:inline; --> useful for multiple paragraphs to be shown on 1 line horizontally 
+
+Now, for eg, in HTML FILE
+    
+        <div class="panel-ops">
+        <p>Today's Deal</p>
+        <p> Customer Service</p>
+        <p>Registry</p>
+        <p>Gift Cards</p>
+        <p>Sell</p>
+    </div>
+    
+    
+    Accessing the same in .css file 
+
+    .panel-ops p{     -->       You might be wondering that any which ways this sub-class only contains <p> tags so there's no need to access
+                                "p" here seperately...But NOOOOOOOOOOOOOOOOOOOO....YOU HAVE TO DO THAT idk why (Or else wrong output)  
+    display:inline;
+}
+
+
+4) justify-content: center --> HORIZONATALLY CENTER mein content ko laayega
+5) align-items: center --> VERTICALLY CENTER mein content ko laayega  
+
+6) (Similar to 2nd point) justify-content: space-evenly ---> Provides equal amt of space to all the sections of contents 
+
+7) font-weight: 700; (No unit) --> makes the text bold */
+
+
+/*  TIP   */
+
+
+/* .nav-cart i {            ----->        "i" means the changes will take place only in the icons of class="nav-cart"    
+font-size: 30px;
+}
+
+.nav-cart {         ------>             Changes will take place in both text & icons (but icons won't be affected much since 
+                                            there's a seperate class styling for that (done above)               
+/*font-size: 0.85rem;
+font-weight: 700;
+
+}    
+
+
+
+One more tip
+
+.hero-msg a{         /* The link mentioned inside anchor tag ( <a href="(url) "> ----- </a> ) will now be displayed in this bluish color 
+color: #007185;
+}
+
+
+One more tip to remember
+
+.panel-ops{
+    width:70%          Means this sub-divclass will occupy 70% of the entire main divclass panel
+                                                                       
+}
+
+
+
+STYLING IN .html instead of .css 
+
+<div class="box-img" style = "background-image: url('box1_image.jpg')"></div> 
+
+(Just remember that whenever u use " " outside, u have to use ' ' inside --> U ALREADY KNOW THIS )
+
+
+
+One more tip
+
+display:flex;   /*All the containers (boxes) in shop-section will now be in the same horizontal line 
+
+flex-wrap: wrap;  /* Since we've made 8 boxes in total & due to "display:flex" all 8 boxes will be on same horiz line. 
+In ordeer to avoid that, we use this flex-wrap which will enable only 4 boxes on 1st line & other 4 boxes on 2nd line   */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+*{                                                            /*THROUGHOUT THE ENTIRE CODE   */
+
+    margin: 0;                         /*We'll set the margin on our own  */
+    font-family: Arial;
+    border: border box;     /*means border will be included inside the cell and not outside seperately. Basically, its' a good 
+                                   practice to mention this  */
+
+
+}
+
+.navbar{                   /* Amazon website ko inspect karega toh you'll get this info (width * height, color, etc....) and use
+                                                  the same over here (Check the correct info accordingly)   */
+
+height: 60px;        /* REMEMBER: NO SPACES BTW NUMBER & px   */
+background-color: #0F1111;
+color: white;           /*We're keeping text color (i.e color) = white coz when we inspected the Amazon website, we found that 
+                                navbar is of black color   */
+display: flex;
+/* This flex enables ki whenever u add another box info in navigation bar woh accordingly navbar mein hi fit hoga and it won't go outside that */
+align-items: center;
+/* This enables that all the details in nav bar will be aligned at the center   */
+justify-content: space-evenly;
+
+}
+
+.nav-logo{   /* See, when u mention height & width in this class then only logo will be visible on webpage coz humne html file mein logo 
+                            ko nav-logo class ke andhar define kiya tha */
+    height: 50px;
+    width: 100px;    /* As mentioned earlier, we got these properties after inspecting the Amazon Website  */
+
+}
+
+.logo{
+    background-image: url("amazon_logo.png");      
+    background-size: cover;       /* Since it's a logo so "cover"    */
+    height: 50px;       /* Copied these 2 prop from .nav-logo styling (Same as it is)    */
+    width: 100%;         /* width - 100px or 100% --> matlab ek hi hai   */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* IMP SECTION WHICH WILL BE ACCESSED BY EVERY DIV CLASS IN THE ENTIRE CODE (JUST DON"T FORGET TO ADD "border" IN EVERY DIV CLASS 
+                               IN .html file TO ACCESS THIS  */
+
+
+
+
+.border{                            /*We just put an add-on in the class "nav-logo" on html file which is border. Why we did so? 
+                  Becoz jab bhi hum logos pe hover karte hai, we observe a white border around them. So hum bhi wohi karenge yaha */
+
+border: 1.5px solid transparent;   /*Note: This isn't a part of our inspection. It's our own logic  */
+
+}
+                             /* "border" class mein we gave it transparent but here, "border:hover" class mein we give it white...meaning...Sirf hover karte wakt border dikhega */ 
+.border:hover{ 
+    border: 1.5px solid white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*       Box 2 (Deliver to --> Font size & color is diff(greyish)     India --> Font size & color is white)        */
+
+
+
+
+
+.add-first{
+
+color: #cccccc;
+
+font-size: 0.85rem; 
+/* See, rem is a much better unit than px coz rem adjusts the size automatically & accordingly. So let's use that..!
+And after inspecting the amazon website, we got to know that "Deliver to" is smaller in font & p2 (i.e "India") is slightly bigger (in px) 
+so let's keep 0.85rem for p1 & 1rem for p2...It will do the work    */
+
+margin-left: 15px;
+/* After inspecting we got to know that "Deliver to" is slightly away from location icon...So we inspected the px of "location" icon --> 15px so 15px hi humne utna durr rakh diya to maintain the left-gap  */
+}
+
+.add-sec{   /*Here, no color coz yeh para mein white color aayega which was already declared at the top beginning */
+    font-size: 1 rem;
+    margin-left: 3px;  /* Here we won't give 15px coz as said earlier location icon & "India" are on the same line so zyada durri nhi..! */
+
+}
+
+.add-icon{         /* Uk why we accessed this class coz location icon and para2 lies on the same line. You might be wondering 
+                 why did we mention display & align-items again? that's coz jo humne nav-bar mein use kiya tha..that was for all 
+                 components of nav-bar...This one is specially for loc icon & para2 (ye sab code karte hi samjhega so you'll know e
+                 whether this step is needed or not     */
+
+display: flex;
+align-items: center;
+
+}
+       
+
+
+
+/*                 BOX 3 - nav-search (option, input placeholder & search icon)  --> 3 sections in nav-search                       */
+
+.nav-search{
+    display: flex;
+    justify-content: space-evenly; /* ***************************VERY IMP **************
+    See, when u create navigation bar, it's gonna be very wide coz of 620 px given and as u know there are only 3 sections so we have 
+    to justify & space out them evenly...!!!!!!!   */
+
+    background-color: pink;
+    /* As of now we gave the entire nagivation search bar as pink bg color coz it will be helpful to predict the exact measurements
+    while executing the code...Uske baad we'll change our bg color as needed  */
+    width: 620px;
+    height: 40px;
+    border-radius: 4px;  /*provides curve to the border ends  */
+
+}
+
+.nav-search{                         /* The entire navigation bar will hover in orange instead of white when hovered   */
+    border: 2px solid orange;
+}
+
+.search-select{
+    background-color: #f3f3f3;
+    width: 50px;
+    text-align: center;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    /*border-radius: 4px; --> We won't use this coz agar tu "All" Option dekhega amazon website pe..You'll observe only top and bottom left are curved */
+    border: none;
+}
+
+.search-input{
+    width: 100%;
+    /* Instead of approx 500 px (After inspecting), we can 100% which means it will occupy all the flex-container spaces and hume bass
+    2 sections - Select ("All" option & Icon) ke liye set karna padega   */
+
+    font-size: 1 rem; /* Toh panel mein input placeholder "Search Amazon" will look slighly bigger   */
+    border: none;
+
+}
+
+/* Fun fact: You can decrease/increase the size of ur logo/icon extracted from url by making changes in font-size..!!! Yes, font-size for Icon/Logo Size adjustments   */
+
+.search-icon{
+    width: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(239, 186, 9);
+
+/* PRO TIP: I DID NOT GET THIS COLOR BY INSPECTING, I JUST CHOSE YELLOW --> THEN CLICKED ON THAT YELLOW BOX ICON WHICH APPEARS 
+AND ADJUSTED MY COLORS...IT'S A FUN WAY OF MODIFYING OUR COLORS WITH DIFFERENT SHADES   */
+
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px ;
+}
+
+
+
+
+
+/*                             BOX 4 & 5 MERGING DUE TO SAME FONT SIZES                */
+
+.span{
+    font-size: 0.7 rem;
+}
+
+.nav-second{
+    font-size: 0.85 rem;
+    font-weight: 700;                                   /* MAKES THE TEXT BOLD    */
+}
+
+
+
+
+
+
+/*                                                BOX 6 (CART)                                */
+
+
+.nav-cart i {              /*       "i" means the changes will take place only in the icons of class="nav-cart"    */
+font-size: 30px;
+}
+
+.nav-cart {                /*      Changes will take place in both text & icons (but icons won't be affected much since 
+                                            there's a seperate class styling for that (done above)               */
+font-size: 0.85rem;
+font-weight: 700;
+
+}
+
+
+
+
+
+/*                                            NEXT PANEL (class="panel") ---> This will contain 3 sub-classes (boxes)                 */
+
+.panel{
+
+height: 40px;
+background-color: #222f3d;
+display:flex;
+color: white;      /* color --> means text color */
+align-items: center;         /* Vertically centered  */
+justify-content: space-evenly;        /* Equal amount of space throughout   */
+}
+
+.panel-ops p{         /* You might be wondering that any which ways this sub-class only contains <p> tags so there's no need to access
+                         "p" here seperately...But NOOOOOOOOOOOOOOOOOOOO....YOU HAVE TO DO THAT idk why (Or else wrong output) */ 
+    display:inline;
+    margin-left: 15px;
+}
+
+.panel-ops{
+    width:70% ;        /*   Means this sub-divclass will occupy 70% of the entire main divclass panel   */
+    font-size: 0.85 rem;                      
+}
+
+.panel-deals{
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+
+
+
+
+
+
+
+
+
+
+
+/*                                    hero-section (Outside <header> tag)                    */
+
+.hero-section{
+    background-image: url("hero_image.jpg");
+    background-size: cover;  /* This will ensure that the bg img covers all the bg area correctly   */
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;     
+}
+
+.hero-msg{
+    background-color: white;
+    color: black;
+    height:40px;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.85 rem;
+    width:80%;
+    margin-bottom: 25px;
+}
+
+
+
+
+/* PLS REFER TO THIS TIME-STAMP (1:04:16 ----> 1:06:20 - Apna College Amazon Clone YT Video) to understand how the above 2 classes ka contents worked    */
+
+
+
+
+.hero-msg a{         /* The link mentioned inside anchor tag will now be displayed in this bluish color  */
+    color: #007185;
+}
+
+
+ 
+
+
+
+
+
+
+/*                             SHOP SECTION (Same like above - Outside header)                           */
+
+.shop-section{
+    display:flex;   /*All the containers (boxes) in shop-section will now be in the same horizontal line */
+    flex-wrap: wrap;  /* Since we've made 8 boxes in total & due to "display:flex" all 8 boxes will be on same horiz line. 
+    In ordeer to avoid that, we use this flex-wrap which will enable only 4 boxes on 1st line & other 4 boxes on 2nd line   */
+
+
+    justify-content: space-evenly;
+    background-color: #e2e7e6;
+
+}
+
+
+
+
+.box{
+    /* border: 2px solid black;   /*  --> Anyways, it's not needed but just like in sketching, we need borders before starting to paint.
+    The same was done here to place the boxes correctly and then comment out this border  once work is done   
+    
+    This is a general class for box1 - box 4 (just like .border class at the top which was accessed
+                                        by the required div classes by adding it on in the resp class name (in HTML File) ) ---> Same is done here  */
+
+
+    height: 400px;
+    width: 23%;     /* All boxes inside this main class "box" will occupy 23%  */
+    /* height & width were guessed (You'll come to know as u code)   */
+    background-color: white;
+    padding: 20px 0px 15px;   /*After inspecting */
+    margin-top: 15px;
+
+
+}
+
+.box-img{
+    height: 300px;            /* Guess work and not inspecting */
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    background-size: cover;
+}
+
+.box-content{
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.box-content p{
+    color: #007185;
+}
+
+
+
+
+/*                                        FOOTER SECTION                     */
+
+
+footer{     /*    .footer NHI AAYEGA COZ <footer> IS ALREADY A TAG SO WE CAN ACCESS IT DIRECTLY WITHOUT CLASS (without . )   */
+
+margin-top:15px;
+
+}
+
+.foot-panel1{
+    background-color: #37475a;
+    color:white;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.85rem;
+}
+                           /*                       FOOT PANEL 2           */
+
+
+.foot-panel2{
+    background-color: #222f3d;
+    color:white;
+    height: 300px;
+    display:flex;
+    justify-content: space-evenly;
+}
+
+ul {
+    margin-top: 20px;
+}
+
+ul a{
+    display:block;  /*Whenever we need sab lists ek row mein aaye toh parent container mein jaakar just mention "display:flex"  
+                                   Hence, I mentd display:flex in .footpanel2  */
+    font-size: 0.85 rem;
+    margin-top: 10px;
+    color: #dddddd;
+}
+
+
+
+                       /*                               FOOT PANEL 3                     */
+
+
+.foot-panel3{
+    background-color: #222f3d;
+    color: white;
+    border-top: 0.5px solid white;      /* It will create a border on top */
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.logo{
+
+    background-image: url("amazon_logo.png");      
+    background-size: cover;       /* Since it's a logo so "cover"    */
+    height: 50px;       /* Copied these 2 prop from .nav-logo styling (Same as it is)    */
+    width: 100px;         /* width - 100px or 100% --> matlab ek hi hai   */
+
+}
+
+.foot-panel4{
+    background-color: #0F1111;
+    color: white;
+    height: 80px;
+    font-size: 0.78rem;
+    text-align: center;
+
+    /* display: flex;
+    justify-content: center;            --------> We won't mention this since we need "copyright" & "pages" class contents on 2 seperate 
+                                             lines. Hence, we'll access them again seperately below 
+    align-items: center;                                                                                          */
+
+}
+
+.pages{
+    padding-top: 25px;  
+    
+
+}
+
+.copyright{
+
+    padding-top: 5px;
+    
+}
+
