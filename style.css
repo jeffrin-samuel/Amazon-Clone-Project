@@ -151,10 +151,10 @@ In ordeer to avoid that, we use this flex-wrap which will enable only 4 boxes on
 
 *{                                                            /*THROUGHOUT THE ENTIRE CODE   */
 
-    margin: 0;                         /*We'll set the margin on our own  */
+    margin: 0;                         /*We'll set the margin on our own  */ 
     font-family: Arial;
     box-sizing: border-box;     /*means border will be included inside the cell and not outside seperately. Basically, its' a good 
-                                   practice to mention this  */
+                                   practice to mention this  (Very Imp)    */
 
 
 }
