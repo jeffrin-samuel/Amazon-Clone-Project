@@ -269,6 +269,27 @@ footer {
     font-size: 0.85rem;
 }
 
+.foot-panel1 a {
+    color: white;
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+
+.foot-panel1 a:hover {
+    background-color: #485769;
+    cursor: pointer;
+}
+
+/* Smooth scroll behavior */
+html {
+    scroll-behavior: smooth;
+}
+
 /* Footer Panel 2 - Links */
 .foot-panel2 {
     background-color: #222f3d;
@@ -313,6 +334,13 @@ ul p {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.foot-panel3 .logo {
+    background-image: url("amazon_logo.png");
+    background-size: cover;
+    height: 50px;
+    width: 100px;
 }
 
 /* Footer Panel 4 - Copyright */
